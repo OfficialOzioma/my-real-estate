@@ -1,7 +1,5 @@
-# Real Estate Site 
-### Made By [***DannyGlade***](https://github.com/DannyGlade)
-This is a Real E-state Site Project Made with Laravel, Bootstarp, JQuery, DataTables, FancyApp.
-I only made it for my College Project, but if you are here that means I might have posted it online somewhere and you are here to steal it or see as refrence, but it's okay.
+# Real Estate 
+This is a Real E-state Project Made with Laravel, Bootstarp, JQuery, .
 
 ## What can you do in this website
 - Admin can handle facilities, cities, categories, properties, Reviews, Users, Change Password & Site settings
@@ -36,11 +34,11 @@ I only made it for my College Project, but if you are here that means I might ha
 1. Open Cmd in folder you want to install project in...
 2. Type below Command and hit enter...
 ```bash
-git clone https://github.com/DannyGlade/Real_Estate_Site.git
+git clone git@github.com:OfficialOzioma/real-estate.git
 ```
 4. Then cd into folder using below Command
 ```bash
-cd Real_Estate_Site
+cd real-estate
 ```
 > Note from here On, You can also use Terminal from VS Code or Your IDE...
 
