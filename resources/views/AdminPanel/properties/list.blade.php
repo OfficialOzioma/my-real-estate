@@ -23,7 +23,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Public</th>
                             <th scope="col">Property</th>
-                            <th scope="col">Price ( ₹ )</th>
+                            <th scope="col">Price ( &#8358;)</th>
                             <th scope="col">Featured</th>
                             <th scope="col">Purpose</th>
                             <th scope="col">Category</th>

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @push('title')
-    {{ $CMS['home_title'] }}
+    {{ $CMS['home_title'] ?? "" }}
 @endpush
 @push('meta')
-    {{ $CMS['home_meta'] }}
+    {{ $CMS['home_meta']  ?? ""?? "" }}
 @endpush
 @section('content_box')
     <main>
@@ -40,7 +40,7 @@
             <hr class="featurette-divider">
 
             <div class="row featurette">
-                @if (!empty($CMS['home_image']))
+                @if (!empty($CMS['home_image'] ?? ""))
                     <div class="col-md-5">
                         <img width="500px" class="h-auto" src="{{ asset('/storage/cms/' . $CMS['home_image']) }}"
                             alt="Error">
@@ -49,7 +49,7 @@
                 @if (empty($CMS['home_image']))
                     <div class="col-md-12 d-flex align-items-center">
                         <div class="text-center w-100" style="text-align: justify">
-                            {!! $CMS['home_content'] !!}
+                            {!! $CMS['home_content'] ?? "" !!}
                         </div>
                     </div>
                 @else

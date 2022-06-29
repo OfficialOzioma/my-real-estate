@@ -15,10 +15,7 @@ This is a Real E-state Project Made with Laravel, Bootstarp, JQuery, .
 - [Bootstrap v5.1 Examples](https://getbootstrap.com/docs/5.1/examples/) (Used Some of these as boiler plate)
 - [Font Awesome](https://fontawesome.com/docs/web/setup/get-started)
 - [JQuery v3.6.0](https://releases.jquery.com/)
-- [DataTables v1.11.4](https://datatables.net/manual/) with [DataTables v1.11.4 Bootstap 5](https://datatables.net/examples/styling/bootstrap5.html)
-- [FancyApps](https://fancyapps.com/docs/ui/installation)
-  - [FancyBox](https://fancyapps.com/docs/ui/fancybox)
-  - [Carousal](https://fancyapps.com/docs/ui/carousel)
+- [Bootstap 5](https://datatables.net/examples/styling/bootstrap5.html)
 - [CKEditor v4](https://ckeditor.com/docs/ckeditor4/latest/guide/index.html)
 - And Familiarity with Laravel, Can't remember anything else...
 
