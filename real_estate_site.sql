@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `real_estate_site`
+-- Database: `real_estate`
 --
-CREATE DATABASE IF NOT EXISTS `real_estate_site` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `real_estate_site`;
+CREATE DATABASE IF NOT EXISTS `real_estate` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `real_estate`;
 
 -- --------------------------------------------------------
 

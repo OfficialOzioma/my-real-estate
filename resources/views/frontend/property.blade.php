@@ -16,9 +16,9 @@
                         <div class="row g-0 mb-2 border-bottom">
                             <div class="col-md-4">
                                 {{-- <a href="#"> --}}
-                                    <img class="img-fluid rounded-start h-100 w-100" style="cursor: pointer" data-fancybox="gallery"
-                                        data-src="{{ asset('/storage/property/' . $item->image) }}"
-                                        src="{{ asset('/storage/property/' . $item->image) }}" alt="{{ $item->title }}">
+                                <img class="img-fluid rounded-start h-100 w-100" style="cursor: pointer"
+                                    data-fancybox="gallery" data-src="{{ asset('/storage/property/' . $item->image) }}"
+                                    src="{{ asset('/storage/property/' . $item->image) }}" alt="{{ $item->title }}">
                                 {{-- </a> --}}
                             </div>
                             <div class="col-md-8">
@@ -54,13 +54,11 @@
                                             <div class="col-12 mb-3">
                                                 @if ($status)
                                                     <a class="btn btn-lg
-                                                    @if (!empty($saved))
-                                                        @if (in_array($item->title_slug, $saved)) btn-success
+                                                    @if (!empty($saved)) @if (in_array($item->title_slug, $saved)) btn-success
                                                     @else
-                                                        btn-outline-success
-                                                    @endif
-                                                @else
-                                                    btn-outline-success
+                                                        btn-outline-success @endif
+@else
+btn-outline-success
                                                 @endif
                                                 save_pro"
                                                         href="{{ route('save_pro_ajax', [$item->title_slug, $item->id]) }}">
@@ -99,7 +97,7 @@
                                         </div>
                                         <div class="col-10">
                                             <h5 class="card-text">
-                                                ₹ {{ number_format($item->price) }}
+                                                &#8358; {{ number_format($item->price) }}
                                                 @if ($item->purpose != 'sale')
                                                     /month
                                                 @endif
@@ -143,7 +141,7 @@
                                                     </div>
                                                     <div class="col-12 mb-2">
                                                         {{-- <div class="ratio ratio-16x9"> --}}
-                                                            {!! $item->video !!}
+                                                        {!! $item->video !!}
                                                         {{-- </div> --}}
                                                     </div>
                                                 </div>
@@ -168,8 +166,7 @@
                                                 <h5 class="card-title">
                                                     <i class="fas fa-drafting-compass"></i> Floorplan :
                                                 </h5>
-                                                <img class="w-100 rounded"
-                                                    style="cursor: pointer"
+                                                <img class="w-100 rounded" style="cursor: pointer"
                                                     src="{{ asset('/storage/property/' . $item->floorplan) }}"
                                                     data-fancybox="gallery"
                                                     data-src="{{ asset('/storage/property/' . $item->floorplan) }}"
@@ -183,7 +180,7 @@
                                                 </h5>
                                                 <div class="card-text">
                                                     @foreach ($faci as $fac)
-                                                        @if($fac)
+                                                        @if ($fac)
                                                             <button class="btn btn-{{ $fac->color }} m-1 mb-2">
                                                                 {!! $fac->fa !!} {{ $fac->faci }}
                                                             </button>
@@ -235,7 +232,7 @@
                                 <div class="col-12 mb-2">
                                     <div class="card-body">
                                         {{-- <div class="ratio ratio-21x9"> --}}
-                                            {!! $item->map !!}
+                                        {!! $item->map !!}
                                         {{-- </div> --}}
                                     </div>
                                 </div>
@@ -255,7 +252,7 @@
                                             <div class="col-1 text-center mb-2">
                                                 <a href="{{ route('UserProfile') }}">
                                                     <img class="rounded-circle"
-                                                        src="{{ !empty($user['data']['image'])? asset('/storage/userdata/' . $user['data']['image']): asset('stockUser.png') }}"
+                                                        src="{{ !empty($user['data']['image']) ? asset('/storage/userdata/' . $user['data']['image']) : asset('stockUser.png') }}"
                                                         width="60px" alt="No Img">
                                                 </a>
                                                 <a href="{{ route('UserProfile') }}" class="text-decoration-none">
@@ -263,8 +260,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-11 mb-2">
-                                                <textarea name="review_text" id="review_form_input"
-                                                    class="form-control h-100"
+                                                <textarea name="review_text" id="review_form_input" class="form-control h-100"
                                                     placeholder="Enter Your Review here..." required></textarea>
                                                 <div id="review_form_btns" class="mt-2">
                                                     <div class="d-flex">
@@ -285,7 +281,7 @@
                                                 <div class="col-1 text-center mb-2">
                                                     <a href="{{ route('UserProfile') }}">
                                                         <img class="rounded-circle"
-                                                            src="{{ !empty($user['data']['image'])? asset('/storage/userdata/' . $user['data']['image']): asset('stockUser.png') }}"
+                                                            src="{{ !empty($user['data']['image']) ? asset('/storage/userdata/' . $user['data']['image']) : asset('stockUser.png') }}"
                                                             width="60px" alt="No Img">
                                                     </a>
                                                     <a href="{{ route('UserProfile') }}" class="text-decoration-none">
@@ -326,7 +322,7 @@
                                         <div class="row mb-1">
                                             <div class="col-1 text-center mb-2">
                                                 <img class="rounded-circle"
-                                                    src="{{ !empty($review->Users[0]->Data->image)? asset('/storage/userdata/' . $review->Users[0]->Data->image): asset('stockUser.png') }}"
+                                                    src="{{ !empty($review->Users[0]->Data->image) ? asset('/storage/userdata/' . $review->Users[0]->Data->image) : asset('stockUser.png') }}"
                                                     width="60px" alt="No Img">
                                                 {{ $review->Users[0]->name }}
                                             </div>
@@ -383,7 +379,7 @@
                     }
                 });
             });
-            @if($status)
+            @if ($status)
                 $('#review_form_btns').hide();
                 $(document).on('focus', '#review_form_input', function(e) {
                     e.preventDefault();
